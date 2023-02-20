@@ -1,5 +1,5 @@
 # BNCC Mid Backend Project
-Todo List Website Based
+To-do List Website Based
 
 Team:
 - [Bryan Fernando Kurniawan Suhartono - 2602079804](https://github.com/bryanfks-dev)
