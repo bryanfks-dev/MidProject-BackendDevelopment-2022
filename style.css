@@ -1,0 +1,1042 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+:root { 
+    --primary-color: #7E49FA;
+    --secondary-color: #A777E9;
+    --nav-bg: #7E49FA;
+    --primary-select-item: #9F65FF;
+    --primary-selected-item: #BF81FF;
+    --secondary-select-item: #8659C7;
+    --secondary-selected-item: #653CA6;
+    --card-bg: #F7F7F7;
+    --primary-bg: #F5F7FAF7;
+    --secondary-bg: #E6D8FA;
+    --primary-text-color: #101223;
+    --secondary-text-color: #F5F7FA;
+    --input-bg: #F5F7FA;
+}
+
+.dark {
+    --primary-color: #F3F4F8;
+    --secondary-color: #2B2A3A;
+    --nav-bg: #101223;
+    --primary-select-item: #8C8D95;
+    --primary-selected-item: #C6C7CB;
+    --secondary-select-item: #504F60;
+    --secondary-selected-item: #79778A;
+    --card-bg: #F7F7F7;
+    --primary-bg: #101223;
+    --secondary-bg: #B3B5BD;
+    --secondary-color: #B3B5BD;
+    --primary-text-color: #F3F4F8;
+    --secondary-text-color: #000000;
+    --input-bg: #F3F4F8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins";
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    user-select: none;
+}
+
+/* Register page */
+#register {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-bg);
+}
+
+#register form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form title */
+#register form > h1 {
+    color: var(--primary-text-color);
+    font-weight: 700;
+    overflow: hidden;
+    text-align: center;
+}
+
+#register form > h1:before, 
+#register form > h1:after {
+    content: '';
+    position: relative;
+    height: 1px;
+    background-color: var(--primary-text-color);
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+}
+
+#register form > h1:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+#register form > h1:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+/* Form content */
+#register form .input-content {
+    display: grid;
+    gap: 1em;
+}
+
+#register form .input-content > div {
+    position: relative;
+}
+
+/* Inputs */
+#register form .input-content input {
+    padding: .4rem .5rem .4rem 2rem;
+    background-color: var(--input-bg);
+    border: 2px solid var(--primary-text-color);
+    border-radius: .4rem;
+    width: 25em;
+    -webkit-border-radius: .4rem;
+    -moz-border-radius: .4rem;
+    -ms-border-radius: .4rem;
+    -o-border-radius: .4rem;
+}
+
+#register form .input-content input:focus {
+    outline: none;
+}
+
+#register form box-icon {
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    top: calc(50% - 2px);
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    margin-left: .7rem;
+}
+
+/* Register button */
+#register form button {
+    color: var(--secondary-text-color);
+    font-size: large;
+    font-weight: 400;
+    background-color: var(--primary-color);
+    border-radius: 3.125em;
+    -webkit-border-radius: 3.125em;
+    -moz-border-radius: 3.125em;
+    -ms-border-radius: 3.125em;
+    -o-border-radius: 3.125em;
+    margin-top: 3rem;
+    padding: .3em 0;
+    cursor: pointer;
+}
+
+#register form button:hover {
+    background-color: var(--primary-select-item);
+}
+
+#register form button:active {
+    background-color: var(--primary-selected-item);
+}
+
+/* Don't have account section */
+#register form p {
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    font-size: smaller;
+    color: var(--primary-text-color);
+}
+
+#register form p a {
+    color: var(--primary-text-color);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* Login page */
+#login {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-bg);
+}
+
+#login form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form title */
+#login form > h1 {
+    color: var(--primary-text-color);
+    font-weight: 700;
+    overflow: hidden;
+    text-align: center;
+}
+
+#login form > h1:before, 
+#login form > h1:after {
+    content: '';
+    position: relative;
+    height: 1px;
+    background-color: var(--primary-text-color);
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+}
+
+#login form > h1:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+#login form > h1:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+/* Form content */
+#login form .input-content {
+    display: grid;
+    gap: 1em;
+}
+
+#login form .input-content > div {
+    position: relative;
+}
+
+/* Inputs */
+#login form .input-content input {
+    padding: .4rem .5rem .4rem 2rem;
+    background-color: var(--input-bg);
+    border: 2px solid var(--primary-text-color);
+    border-radius: .4rem;
+    width: 25em;
+    -webkit-border-radius: .4rem;
+    -moz-border-radius: .4rem;
+    -ms-border-radius: .4rem;
+    -o-border-radius: .4rem;
+}
+
+#login form .input-content input:focus {
+    outline: none;
+}
+
+#login form box-icon:not(#show-password) {
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    top: calc(50% - 2px);
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    margin-left: .7rem;
+}
+
+#login form #show-password {
+    position: absolute;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    top: calc(50% - 2px);
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    margin-right: .7rem;
+    cursor: pointer;
+}
+
+/* Show keep me login box */
+#login form .keep-me-login-box {
+    margin: .8rem 0 0 .5rem;
+    display: flex;
+    gap: .6em;
+    align-items: center;
+}
+
+#login form .keep-me-login-box input {
+    width: 1.15em;
+    height: 1.15em;
+    cursor: pointer;
+}
+
+#login form .keep-me-login-box span {
+    font-size: smaller;
+    color: var(--primary-text-color);
+}
+
+/* Login button */
+#login form button {
+    color: var(--secondary-text-color);
+    font-size: large;
+    font-weight: 400;
+    background-color: var(--primary-color);
+    border-radius: 3.125em;
+    -webkit-border-radius: 3.125em;
+    -moz-border-radius: 3.125em;
+    -ms-border-radius: 3.125em;
+    -o-border-radius: 3.125em;
+    margin-top: 3rem;
+    padding: .3em 0;
+    cursor: pointer;
+}
+
+#login form button:hover {
+    background-color: var(--primary-select-item);
+}
+
+#login form button:active {
+    background-color: var(--primary-selected-item);
+}
+
+/* Don't have account section */
+#login form p {
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    font-size: smaller;
+    color: var(--primary-text-color);
+}
+
+#login form p a {
+    color: var(--primary-text-color);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* App page */
+#todo-app {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-color: var(--secondary-bg);
+}
+
+/* Top nav */
+#todo-app .top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3em;
+    background-color: var(--nav-bg);
+    padding: 1em 1.5em;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+#todo-app .top-nav .menu-btn {
+    display: flex;
+    flex-direction: column;
+    gap: .2em;
+    cursor: pointer;
+}
+
+/* Menu button */
+#todo-app .top-nav .menu-btn div {
+    height: .2em;
+    width: 1.3em;
+    background-color: #FFFFFF;
+    transition: 400ms;
+    -webkit-transition: 400ms;
+    -moz-transition: 400ms;
+    -ms-transition: 400ms;
+    -o-transition: 400ms;
+}
+
+#todo-app .top-nav .menu-btn div:nth-child(2) {
+    width: calc(3 * 1.3em / 4);
+}
+
+#todo-app .top-nav .menu-btn div:last-child {
+    width: calc(3 * 1.3em / 8);
+}
+
+/* Menu button is active */
+#todo-app .top-nav .active div:first-child {
+    transform: translateY(.4rem) rotate(45deg);
+    -webkit-transform: translateY(.4rem) rotate(45deg);
+    -moz-transform: translateY(.4rem) rotate(45deg);
+    -ms-transform: translateY(.4rem) rotate(45deg);
+    -o-transform: translateY(.4rem) rotate(45deg);
+}
+
+#todo-app .top-nav .active div:nth-child(2) {
+    width: 0;
+}
+
+#todo-app .top-nav .active div:last-child {
+    width: 1.3em;
+    transform: translateY(-.4rem) rotate(-45deg);
+    -webkit-transform: translateY(-.4rem) rotate(-45deg);
+    -moz-transform: translateY(-.4rem) rotate(-45deg);
+    -ms-transform: translateY(-.4rem) rotate(-45deg);
+    -o-transform: translateY(-.4rem) rotate(-45deg);
+}
+
+/* Logo */
+#todo-app .top-nav .logo {
+    display: flex;
+    gap: .5em;
+    align-items: center;
+    color: #FFFFFF;
+    fill: #FFFFFF;
+}
+
+#todo-app .top-nav .logo box-icon {
+    width: 32px;
+    height: 32px;
+}
+
+#todo-app .top-nav .logo h1 {
+    font-size: x-large;
+}
+
+/* Add task button */
+#todo-app .top-nav > button {
+    display: flex;
+    align-items: center;
+    gap: .7em;
+    justify-content: center;
+    color: var(--secondary-text-color);
+    fill: var(--secondary-text-color);
+    background-color: var(--secondary-color);
+    padding: 1em;
+    border-radius: 3.125em;
+    -webkit-border-radius: 3.125em;
+    -moz-border-radius: 3.125em;
+    -ms-border-radius: 3.125em;
+    -o-border-radius: 3.125em;
+    cursor: pointer;
+}
+
+#todo-app .top-nav > button span {
+    font-size: medium;
+    font-weight: 500;
+}
+
+#todo-app .top-nav > button:hover {
+    background-color: var(--secondary-select-item);
+}
+
+#todo-app .top-nav > button:active {
+    background-color: var(--secondary-selected-item);
+}
+
+/* Menu modal */
+#todo-app .menu-modal {
+    background-color: var(--nav-bg);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    color: var(--secondary-text-color);
+    fill: var(--secondary-text-color);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    overflow-y: hidden;
+    height: 0;
+    z-index: 99;
+    transition: 400ms;
+    -webkit-transition: 400ms;
+    -moz-transition: 400ms;
+    -ms-transition: 400ms;
+    -o-transition: 400ms;
+}
+
+#todo-app .menu-modal > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: .5em 6em 2em 6em;
+}
+
+/* User identifier */
+#todo-app .menu-modal > div > form {
+    color: #FFFFFF;
+    fill: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+#todo-app .menu-modal > div > form > div {
+    display: flex;
+}
+
+#todo-app .menu-modal > div > form > div div {
+    display: flex;
+    gap: .3em;
+    flex-direction: row;
+    align-items: center;
+}
+
+#todo-app .menu-modal > div > form > div div box-icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* Logout button */
+#todo-app .menu-modal > div > form button {
+    display: flex;
+    gap: .4em;
+    align-items: center;
+    width: fit-content;
+    background-color: var(--secondary-color);
+    padding: .5em 1em;
+    border-radius: 3.125em;
+    color: var(--secondary-text-color);
+    fill: var(--secondary-text-color);
+    cursor: pointer;
+    -webkit-border-radius: 3.125em;
+    -moz-border-radius: 3.125em;
+    -ms-border-radius: 3.125em;
+    -o-border-radius: 3.125em;
+}
+
+#todo-app .menu-modal > div > form button span {
+    font-size: medium;
+    font-weight: 500;
+}
+
+#todo-app .menu-modal > div > form button box-icon {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+#todo-app .menu-modal > div > form button:hover {
+    background-color: var(--secondary-select-item);
+}
+
+#todo-app .menu-modal > div > form button:active {
+    background-color: var(--secondary-selected-item);
+}
+
+/* Main content */
+#todo-app .menu-modal > div > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    font-weight: 500;
+}
+
+/* Add task button */
+#todo-app .menu-modal > div > div button {
+    display: flex;
+    gap: .7em;
+    align-items: center;
+    color: var(--secondary-text-color);
+    font-weight: 600;
+    font-size: medium;
+    justify-content: center;
+    width: fit-content;
+    padding: 1em 2em;
+    border-radius: 3.125em;
+    background-color: var(--secondary-color);
+    -webkit-border-radius: 3.125em;
+    -moz-border-radius: 3.125em;
+    -ms-border-radius: 3.125em;
+    -o-border-radius: 3.125em;
+    cursor: pointer;
+}
+
+#todo-app .menu-modal > div > div > button:hover {
+    background-color: var(--secondary-select-item);
+}
+
+#todo-app .menu-modal > div > div > button:active {
+    background-color: var(--secondary-selected-item);
+}
+
+/* Theme */
+#todo-app .menu-modal > div > div > .theme {
+    display: flex;
+    gap: 5em;
+    align-items: center;
+}
+
+#todo-app .menu-modal > div > div > .theme > span {
+    color: #FFFFFF;
+}
+
+#todo-app .menu-modal > div > div > .theme div {
+    position: relative;
+}
+
+#todo-app .menu-modal > div > div > .theme div .current-theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .4em;
+    padding: .2em .9em .2em .7em;
+    background-color: var(--secondary-color);
+    border-radius: .5em;
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    -ms-border-radius: .5em;
+    -o-border-radius: .5em;
+    cursor: pointer;
+    transition: 800ms;
+    -webkit-transition: 800ms;
+    -moz-transition: 800ms;
+    -ms-transition: 800ms;
+    -o-transition: 800ms;
+}
+
+#todo-app .menu-modal > div > div > .theme div .current-theme > div {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+#todo-app .menu-modal > div > div > .theme div .current-theme > div > box-icon {
+    transition: 400ms;
+    -webkit-transition: 400ms;
+    -moz-transition: 400ms;
+    -ms-transition: 400ms;
+    -o-transition: 400ms;
+}
+
+/* Selected theme */
+/* Theme modal */
+#todo-app .menu-modal > div > div > .theme > div .theme-modal {
+    position: absolute;
+    width: 100%;
+    background-color: var(--secondary-color);
+    transition: 200ms;
+    -webkit-transition: 200ms;
+    -moz-transition: 200ms;
+    -ms-transition: 200ms;
+    -o-transition: 200ms;
+    border-bottom-left-radius: .5em;
+    border-bottom-right-radius: .5em;
+    height: 0;
+    overflow-y: hidden;
+}
+
+#todo-app .menu-modal > div > div > .theme > div .theme-modal > div {
+    display: flex;
+    gap: .4em;
+    align-items: center;
+    justify-content: center;
+    padding: .2em .9em .2em .7em;
+    cursor: pointer;
+}
+
+#todo-app .menu-modal > div > div > .theme > div .theme-modal .selected-theme {
+    background-color: var(--secondary-selected-item);
+}
+
+#todo-app .menu-modal > div > div > .theme > div .theme-modal > div:not(.selected-theme):hover {
+    background-color: var(--secondary-select-item);
+}
+
+/* Theme modal is open */
+#todo-app .menu-modal > div > div > .theme > div .open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: 400ms;
+    -webkit-transition: 400ms;
+    -moz-transition: 400ms;
+    -ms-transition: 400ms;
+    -o-transition: 400ms;
+}
+
+#todo-app .menu-modal > div > div > .theme > div .open > div > box-icon {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+/* Cards */
+#todo-app .card-wrapper {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+    padding: 3em 6em;
+}
+
+/* Card */
+#todo-app .card-wrapper > div {
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* Card title */
+#todo-app .card-wrapper > div .card-title {
+    display: flex;
+    align-self: center;
+    gap: .5em;
+    padding: 1.2em 0 .7em 1.2em;
+}
+
+#todo-app .card-wrapper > div .card-title span {
+    font-weight: 600;
+}
+
+/* Card hr */
+#todo-app .card-wrapper > div hr {
+    width: 97%;
+    margin: auto;
+    background-color: #000000;
+    height: 1px;
+}
+
+/* Card content */
+#todo-app .card-wrapper > div .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    height: 28vh;
+    overflow-y: scroll;
+    padding: 1em 1.5%;
+}
+
+#todo-app .card-wrapper > div .card-content > form > div {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+#todo-app .card-wrapper > div .card-content > form > div .content-wrapper {
+    flex: 1;
+    padding: .2em 1.5em;
+    border: 2px solid #000000;
+    border-radius: 2.5em;
+    -webkit-border-radius: 2.5em;
+    -moz-border-radius: 2.5em;
+    -ms-border-radius: 2.5em;
+    -o-border-radius: 2.5em;
+}
+
+#todo-app .card-wrapper > div .card-content > form > div .content-wrapper .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Task content */
+#todo-app .card-wrapper > div .card-content > form > div .content > div:first-child {
+    display: flex;
+    flex-direction: column;
+}
+
+#todo-app .card-wrapper > div .card-content > form > div input {
+    width: 9em;
+    font-weight: 500;
+    background-color: var(--card-bg);
+    user-select: none;
+}
+
+#todo-app .card-wrapper > div .card-content > form > div input:focus {
+    outline: none;
+}
+
+#todo-app .card-wrapper > div .card-content > form > div input:not(input[name="task-title"]),
+#todo-app .card-wrapper > div .card-content > form > div box-icon {
+    width: 1.15em;
+    height: 1.15em;
+}
+
+#todo-app .card-wrapper > div .card-content > form > div box-icon[name="calendar-event"] {
+    width: 1em;
+    height: auto;
+}
+
+#todo-app .card-wrapper > div .card-content > form > div input:not(input[name="task-title"]),
+#todo-app .card-wrapper > div .card-content > form > div button,
+#todo-app .card-wrapper > div .card-content > form > div box-icon:not(box-icon[name="calendar-event"]) {
+    cursor: pointer;
+}
+
+/* Task name section */
+#todo-app .card-wrapper > div .card-content > form > div .content-wrapper .content div > div:first-child {
+    gap: .7em;
+}
+
+#todo-app .card-wrapper > div .card-content > form > div .content-wrapper .content div > div:first-child span {
+    font-size: smaller;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+#todo-app .card-wrapper > div .card-content > form > div .content-wrapper .content div > div:first-child button {
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+    padding: 0 .4em;
+    display: none;
+}
+
+#todo-app .card-wrapper > div .card-content > form > div .content-wrapper .content div > div:first-child .show {
+    display: block;
+}
+
+#todo-app .card-wrapper > div .card-content > form > div .content-wrapper .content div > div:first-child button:hover {
+    background-color: var(--secondary-select-item);
+}
+
+#todo-app .card-wrapper > div .card-content > form > div .content-wrapper .content div > div:first-child button:active {
+    background-color: var(--secondary-selected-item);
+}
+
+/* Deadline section */
+#todo-app .card-wrapper > div .card-content > form > div .content-wrapper .content div > div {
+    display: flex;
+    align-items: center;
+    gap: .2em;
+}
+
+#todo-app .card-wrapper > div .card-content > form > div .content-wrapper .content div > .is-not-done {
+    fill: #FF0000;
+    color: #FF0000;
+}
+
+#todo-app .card-wrapper > div .card-content > form > div .content-wrapper .content div > .is-done {
+    fill: #01B636;
+    color: #01B636;
+}
+
+#todo-app .card-wrapper > div .card-content > form > div .content-wrapper .content div > .is-done label {
+    text-decoration: line-through;
+}
+
+#todo-app .card-wrapper > div .card-content > form > div div > div label {
+    font-size: .75em;
+    margin-top: -2px;
+}
+
+/* Action icons */
+#todo-app .card-wrapper > div .card-content > form> div .content > div:last-child {
+    display: flex;
+    gap: .7em;
+    align-items: center;
+}
+
+/* Icons */
+#todo-app .card-wrapper > div .card-content > form > div .content > .done-action > box-icon:first-child {
+    display: none;
+}
+
+#todo-app .card-wrapper > div .card-content > form > div .content > div box-icon:first-child {
+    margin-top: 2px;
+}
+
+#todo-app .card-wrapper > div .card-content > form > div .content > div:last-child button {
+    background-color: var(--card-bg);
+}
+
+#todo-app .card-wrapper > div .card-content > form > div .content > div:last-child box-icon {
+    width: 1.5rem;
+    height: auto
+}
+
+/* Dim background */
+#todo-app .dim-bg {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 98;
+    display: none;
+    background: rgba(0,0,0, 0.6);
+    transform: 400ms;
+    -webkit-transform: 400ms;
+    -moz-transform: 400ms;
+    -ms-transform: 400ms;
+    -o-transform: 400ms;
+}
+
+#todo-app .dim-bg.dimmed {
+    display: block;
+    transform: 400ms;
+    -webkit-transform: 400ms;
+    -moz-transform: 400ms;
+    -ms-transform: 400ms;
+    -o-transform: 400ms;
+}
+
+/* Add task modal */
+#todo-app .add-task-modal {
+    background-color: var(--secondary-bg);
+    position: absolute;
+    width: 30vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    z-index: 98;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    display: none;
+    transition: 500ms;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -ms-transition: 500ms;
+    -o-transition: 500ms;
+}
+
+#todo-app .add-task-modal.open {
+    display: block;
+    transition: 500ms;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -ms-transition: 500ms;
+    -o-transition: 500ms;
+}
+
+/* Top section */
+#todo-app .add-task-modal .top-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .7rem 1em;
+    color: #FFFFFF;
+    fill: #FFFFFF;
+    background-color: var(--nav-bg);
+}
+
+#todo-app .add-task-modal .top-section span {
+    font-weight: 500;
+}
+
+#todo-app .add-task-modal .top-section box-icon {
+    cursor: pointer;
+}
+
+/* Content section */
+#todo-app .add-task-modal .content-section {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    align-items: flex-end;
+    padding: 1.3rem 1em;
+}
+
+#todo-app .add-task-modal .content-section > div {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    width: 100%;
+}
+
+#todo-app .add-task-modal .content-section > div div {
+    display: flex;
+    gap: .2em;
+    flex-direction: column;
+}
+
+#todo-app .add-task-modal .content-section > div div label {
+    font-weight: 500;
+}
+
+#todo-app .add-task-modal .content-section > div div input {
+    padding: .5em 1em;
+    border: 2px solid var(--primary-text-color);
+    border-radius: .625em;
+    -webkit-border-radius: .625em;
+    -moz-border-radius: .625em;
+    -ms-border-radius: .625em;
+    -o-border-radius: .625em;
+}
+
+#todo-app .add-task-modal .content-section > div div input[name="deadline"] {
+    width: fit-content;
+}
+
+/* Add button */
+#todo-app .add-task-modal .content-section button {
+    background-color: var(--nav-bg);
+    color: #FFFFFF;
+    padding: .6em 1.5em;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 3.125em;
+    -webkit-border-radius: 3.125em;
+    -moz-border-radius: 3.125em;
+    -ms-border-radius: 3.125em;
+    -o-border-radius: 3.125em;
+}
+
+#todo-app .add-task-modal .content-section button:hover {
+    background-color: var(--secondary-select-item);
+}
+
+#todo-app .add-task-modal .content-section button:active {
+    background-color: var(--secondary-selected-item) ;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #register form .input-content input,
+    #login form .input-content input {
+        width: 20em;
+    }
+
+    #todo-app .menu-modal > div {
+        padding: 1em 4em 1.5em 4em;
+    }
+
+    #todo-app .top-nav > button {
+        display: none;
+    }
+
+    #todo-app .card-wrapper {
+        padding: 2em;
+    }
+    
+
+    #todo-app .card-wrapper > div hr {
+        width: 90%;
+    }
+
+    #todo-app .card-wrapper > div .card-content {
+        padding: 1em;
+    }
+
+    #todo-app .add-task-modal {
+        width: 70vw;
+    }
+}
+
+@media (min-width: 768px) {
+    #todo-app .menu-modal > div > div > button {
+        display: none;
+    }
+}
